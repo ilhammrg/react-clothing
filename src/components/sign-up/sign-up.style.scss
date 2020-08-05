@@ -2,4 +2,33 @@
     width: 380px;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    margin-bottom: auto;
+
+    .sign-up-header {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+        background-color: #fbfbfb;
+
+        .title {
+            margin: 0 auto 5px auto;
+        }
+    
+        .subtitle {
+            margin: auto;
+        }
+    }
+
+    form {
+        padding: 0 20px 20px 20px;
+        
+        .custom-button {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
 }

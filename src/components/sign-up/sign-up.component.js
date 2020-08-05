@@ -48,8 +48,10 @@ class SignUp extends React.Component {
     render() {
         return (
             <div className='sign-up'>
-                <h2>I do not have an account</h2>
-                <span>Sign up with your email</span>
+                <div className='sign-up-header'>
+                    <h2 className='title'>I do not have an account</h2>
+                    <span className='subtitle'>Sign up with your email</span>
+                </div>
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput 
                         name='displayName' 
