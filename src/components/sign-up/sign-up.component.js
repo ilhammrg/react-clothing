@@ -1,8 +1,12 @@
 import React from 'react';
+
+// Firebase
+import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
+
+// Component
+import './sign-up.style.scss';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
-import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
-import './sign-up.style.scss';
 
 class SignUp extends React.Component {
     constructor() {
@@ -50,7 +54,7 @@ class SignUp extends React.Component {
             <div className='sign-up'>
                 <div className='sign-up-header'>
                     <h2 className='title'>I do not have an account</h2>
-                    <span className='subtitle'>Sign up with your email</span>
+                    <span className='subtitle'>Sign up with email</span>
                 </div>
                 <form className='sign-up-form' onSubmit={this.handleSubmit}>
                     <FormInput 

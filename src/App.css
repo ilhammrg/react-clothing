@@ -3,8 +3,10 @@
 }
 
 body {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
   padding: 20px 50px;
+  background-color: #f6f7f9;
 }
 
 a {
