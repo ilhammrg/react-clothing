@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { ReactComponent as Logo } from '../../assets/triangle.svg';
 import { Link } from 'react-router-dom';
 
@@ -25,6 +25,7 @@ export const BrandLogo = styled(Logo)`
 
 export const BrandName = styled.h3`
     display: inline-block;
+    font-size: 24px;
 `;
 
 export const OptionContainer = styled.div`
@@ -35,15 +36,7 @@ export const OptionContainer = styled.div`
     justify-content: flex-end;
 `;
 
-const optionStyles = css`
+export const OptionLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
-`;
-
-export const OptionLink = styled(Link)`
-    ${optionStyles}
-`;
-
-export const OptionDiv = styled.div`
-    ${optionStyles}
 `;
