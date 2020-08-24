@@ -3,7 +3,8 @@
     width: 380px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    // box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
     border-radius: 5px;
     margin-bottom: auto;
 
@@ -18,7 +19,7 @@
         .title {
             margin: 0 auto 5px auto;
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 400;
         }
     
         .subtitle {

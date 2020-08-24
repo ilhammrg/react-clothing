@@ -6,7 +6,7 @@ import CollectionItem from '../collection-item/collection-item.component';
 const CollectionPreview = ({ title, items }) => {
     return (
         <CollectionPreviewContainer>
-            <CollectionPreviewTitle className="title">{title.toUpperCase()}</CollectionPreviewTitle>
+            <CollectionPreviewTitle to={`shop/${encodeURI(title.toLowerCase())}`}>{title.toUpperCase()}</CollectionPreviewTitle>
             <CollectionPreviewItems>
                 {
                 items
@@ -17,7 +17,7 @@ const CollectionPreview = ({ title, items }) => {
                 }
             </CollectionPreviewItems>
         </CollectionPreviewContainer>
-    )
-}
+    );
+};
 
 export default CollectionPreview;

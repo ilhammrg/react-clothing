@@ -7,8 +7,8 @@ export const CollectionContainer = styled.div`
 `;
 
 export const CollectionTitle = styled.span`
-    font-size: 24px;
-    margin: 0 auto 30px;
+    font-size: 18px;
+    margin-bottom: 30px;
 `;
 
 export const CollectionItems = styled.div`
