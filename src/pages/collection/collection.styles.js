@@ -6,8 +6,8 @@ export const CollectionContainer = styled.div`
     margin: 40px 0 40px 40px;
 `;
 
-export const CollectionTitle = styled.h1`
-    font-size: 28px;
+export const CollectionTitle = styled.span`
+    font-size: 24px;
     margin: 0 auto 30px;
 `;
 

@@ -7,15 +7,23 @@ import { CollectionContainer, CollectionTitle, CollectionItems } from './collect
 import CollectionItem from '../../components/collection-item/collection-item.component';
 
 const CollectionPage = ({ collection }) => {
-    const { title, items} = collection;
+    if(collection) {
+        const { title, items } = collection;
+        return (
+            <CollectionContainer>
+                <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
+                <CollectionItems>
+                    {
+                        items.map(item => <CollectionItem key={item.id} item={item} />)
+                    }
+                </CollectionItems>
+            </CollectionContainer>
+        );  
+    }
+
     return (
         <CollectionContainer>
-            <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
-            <CollectionItems>
-                {
-                    items.map(item => <CollectionItem key={item.id} item={item} />)
-                }
-            </CollectionItems>
+            <CollectionTitle>Preparing data...</CollectionTitle>
         </CollectionContainer>
     );
 };

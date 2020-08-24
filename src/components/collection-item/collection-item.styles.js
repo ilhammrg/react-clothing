@@ -46,9 +46,11 @@ export const CollectionItemFooter = styled.div`
     .name {
         margin-bottom: 15px;
         width: 90%;
+        font-weight: 300;
     }
 
     .price {
         width: 10%;
+        font-weight: 300;
     }
 `;

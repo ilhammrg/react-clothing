@@ -10,12 +10,15 @@ import CollectionOverview from '../../components/collection-overview/collection-
 import CollectionPage from '../collection/collection.component';
 
 class Shop extends React.Component {
+    unsubscribeFromSnapshot = null;
+
     componentDidMount() {
         const collectionRef = firestore.collection('collections');
-        collectionRef.onSnapshot(async snapshot => {
+        this.unsubscribeFromSnapshot = collectionRef.onSnapshot(async snapshot => {
             const newCollectionObject = convertSnapshotToObject(snapshot);
-            this.props.updateShopData(newCollectionObject);
+            await this.props.updateShopData(newCollectionObject);
         });
+            
     };
 
     render() {
