@@ -33,7 +33,7 @@ export const CustomButtonContainer = styled.button`
     line-height: 50px;
     padding: 0 35px 0 35px;
     text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     font-weight: bolder;
     color: white;

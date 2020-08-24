@@ -3,7 +3,8 @@ import { ReactComponent as Logo } from '../../assets/triangle.svg';
 import { Link } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
-    font-family: 'Josefin Sans', sans-serif;
+    // font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 75px;
     width: 100%;
     display: flex;
@@ -39,4 +40,5 @@ export const OptionContainer = styled.div`
 export const OptionLink = styled(Link)`
     padding: 10px 15px;
     cursor: pointer;
+    font-weight: 200;
 `;
