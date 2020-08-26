@@ -12,7 +12,7 @@ const StripeButton = ({ price }) => {
 
     return (
         <StripeCheckout 
-            name='TRIANGLE CLOTHING'
+            name='REACT CLOTHING'
             description='Please fill your payment information'
             image='./triangle.svg'
             panelLabel='Pay Now'

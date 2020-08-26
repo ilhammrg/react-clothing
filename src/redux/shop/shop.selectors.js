@@ -10,12 +10,22 @@ export const selectCollections = createSelector(
 
 export const selectCollectionsForPreview = createSelector(
     [selectCollections],
-    collections => collections ? Object.keys(collections).map(key => collections[key]) : null
+    collections => collections ? Object.keys(collections).map(key => collections[key]) : []
 );
 
-export const selectCollection = memoize(collectionID => {
+export const selectCollection = memoize(collectionUrlParam => {
     return createSelector(
         [selectCollections],
-        collections => collections ? collections[collectionID] : null
+        collections => collections ? collections[collectionUrlParam] : null
     );
 });
+
+export const selectIsCollectionFetching = createSelector(
+    [selectShop],
+    shop => shop.isFetching
+);
+
+export const selectIsCollectionLoaded = createSelector(
+    [selectShop],
+    shop => !!(!shop.collections) // !! converts object into boolean, default value will provide false
+);

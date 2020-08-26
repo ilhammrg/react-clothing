@@ -35,6 +35,7 @@ export const CollectionImage = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 5px;
+    border-radius: 6.5px;
 `;
 
 export const CollectionItemFooter = styled.div`
