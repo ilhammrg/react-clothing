@@ -4,8 +4,11 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Redux
 import { Provider } from 'react-redux';
-import { store, persistor } from './redux/store';
+// import { store, persistor } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
+
+// Redux Saga only
+import { store, persistor } from './redux/store-saga';
 
 // Components
 import App from './App';

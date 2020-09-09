@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 // Redux
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-import { setCurrentUser } from './redux/user/user.actions';
+import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
 // Components
@@ -16,34 +16,36 @@ import CheckoutPage from './pages/checkout/checkout.component';
 import Shop from './pages/shop/shop.component';
 
 // Firebase
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+// import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 
 class App extends React.Component {
-  unsubscribeFromAuth = null;
+  // unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if(userAuth) {
-        const userRef = await createUserProfileDocument(userAuth);
+    const { checkUserSession } = this.props;
+    checkUserSession();
+    // this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    //   if(userAuth) {
+    //     const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot(snapshot => {
-          this.props.setCurrentUser(
-            {
-              id: snapshot.id,
-              ...snapshot.data()
-            });
-        });
+    //     userRef.onSnapshot(snapshot => {
+    //       this.props.setCurrentUser(
+    //         {
+    //           id: snapshot.id,
+    //           ...snapshot.data()
+    //         });
+    //     });
         
-      } else {
-        this.props.setCurrentUser(userAuth);
-      }
-    });
+    //   } else {
+    //     this.props.setCurrentUser(userAuth);
+    //   }
+    // });
   }
 
-  componentWillUnmount() {
-    this.unsubscribeFromAuth();
-  }
+  // componentWillUnmount() {
+  //   this.unsubscribeFromAuth();
+  // }
 
   render() {
     return (
@@ -70,8 +72,8 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => {
   return {
-    setCurrentUser: user => dispatch(setCurrentUser(user))
-  }
+    checkUserSession: () => dispatch(checkUserSession())
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
