@@ -10,41 +10,39 @@ import { HeaderContainer, LogoContainer, BrandLogo, BrandName, OptionContainer, 
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
-
 const Header = ({ currentUser, hidden, signOutStart }) => {
-    return (
-        <HeaderContainer>
-            <LogoContainer to='/'>
-                <BrandLogo></BrandLogo>
-                <BrandName>REACT CLOTHING</BrandName>
-            </LogoContainer>
-            <OptionContainer>
-                <OptionLink to='/shop'>SHOP</OptionLink>
-                <OptionLink to='/contact'>CONTACT</OptionLink>
-                {
-                    currentUser ?
-                    <OptionLink as='div' type='button' onClick={signOutStart}>SIGN OUT</OptionLink>
-                    :
-                    <OptionLink to='/signin'>SIGN IN</OptionLink>
-                }
-                <CartIcon />
-            </OptionContainer>
-            {
-                hidden ? null : <CartDropdown />
-            }
-        </HeaderContainer>
-    )
+  return (
+    <HeaderContainer>
+      <LogoContainer to='/'>
+        <BrandLogo></BrandLogo>
+        <BrandName>URBAN CLOTHING</BrandName>
+      </LogoContainer>
+      <OptionContainer>
+        <OptionLink to='/shop'>SHOP</OptionLink>
+        {
+          currentUser ?
+          <OptionLink as='div' type='button' onClick={signOutStart}>SIGN OUT</OptionLink>
+          :
+          <OptionLink to='/signin'>ACCOUNT</OptionLink>
+        }
+        <CartIcon />
+      </OptionContainer>
+      {
+        hidden ? null : <CartDropdown />
+      }
+    </HeaderContainer>
+  );
 }
 
 const mapStatetoProps = createStructuredSelector({
-    currentUser: selectCurrentUser,
-    hidden: selectCartHidden
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
 });
 
 const mapDispatchToProps = dispatch => {
-    return {
-        signOutStart: () => dispatch(signOutStart())
-    };
+  return {
+    signOutStart: () => dispatch(signOutStart())
+  };
 }
 
 export default connect(mapStatetoProps, mapDispatchToProps)(Header);

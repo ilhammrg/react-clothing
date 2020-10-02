@@ -12,7 +12,8 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => {
   return (
     <MenuItemContainer 
       className={`${size}`} 
-      onClick={() => history.push(`${match.url}${linkUrl}`)} 
+      onClick={() => history.push(`${match.url}${linkUrl}`)}
+      height={size ? '380px' : '240px'} 
     >
       <BackgroundImage style={{ backgroundImage: `url(${imageUrl})`}} />
       <ContentContainer>

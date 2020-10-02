@@ -13,12 +13,12 @@ export const MenuItemContainer = styled.div`
   &:hover {
     cursor: pointer;
 
-    & div:first-child {
+    div:first-child {
       transform: scale(1.1);
       transition: transform 1.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
 
-    & div:last-child {
+    div:last-child {
       opacity: 0.9;
     }
   }
@@ -31,8 +31,8 @@ export const MenuItemContainer = styled.div`
     margin-left: 7.5px;
   }
 
-  &.large {
-    height: 380px;
+  @media screen and (min-width: 768px) {
+    height: ${props => props.height};
   }
 `;
 
@@ -44,8 +44,7 @@ export const BackgroundImage = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-  height: 90px;
-  padding: 0 25px 10px 25px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
-// Redux
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
-// Components
-import './App.css';
 import Header from './components/header/header.component';
 import SigninAndSignup from './pages/signin-signup-page/sign-in-and-sign-up.component';
 import Homepage from './pages/homepage/homepage.component';
 import CheckoutPage from './pages/checkout/checkout.component';
 import Shop from './pages/shop/shop.component';
+
+import { GlobalStyles } from './global.styles';
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -21,7 +20,8 @@ const App = ({ checkUserSession, currentUser }) => {
   }, [checkUserSession]);
 
   return (
-    <div className="App">
+    <div>
+      <GlobalStyles />
       <Header />
       <Switch>
         <Route exact path='/' component={Homepage} />
