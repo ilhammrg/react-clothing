@@ -49,12 +49,13 @@ export const CheckoutItemQuantityContainer = styled.span`
     cursor: pointer;
     font-weight: 700;
     transition: 0.3s;
-    border: 1px solid #ddd;
     padding: 0 8px;
     border-radius: 100%;
+    background-color: #efefef;
+    color: #585858;
 
     &:hover {
-      color: #666;
+      color: #131313;
     }
   }
 

@@ -11,8 +11,14 @@ export const CollectionPreviewTitle = styled(Link)`
   font-size: 18px;
   display: inline-block;
   width: fit-content;
-  margin-bottom: 25px;
-  margin-left: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #efefef;
+  }
 `;
 
 export const CollectionPreviewItems = styled.div`

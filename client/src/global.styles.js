@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: 'Bebas Neue', cursive;
     font-size: 1rem;
     background-color: #fff;
+    overflow-y: scroll;
 
     @media screen and (min-width: 1600px) {
       max-width: 1600px;

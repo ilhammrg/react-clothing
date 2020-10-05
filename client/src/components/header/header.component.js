@@ -6,7 +6,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
-import { HeaderContainer, LogoContainer, BrandLogo, BrandName, OptionContainer, OptionLink } from './header.styles';
+import { HeaderContainer, LogoContainer, BrandName, OptionContainer, OptionLink } from './header.styles';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
@@ -14,8 +14,8 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
   return (
     <HeaderContainer>
       <LogoContainer to='/'>
-        <BrandLogo></BrandLogo>
-        <BrandName>URBAN CLOTHING</BrandName>
+        <BrandName className='small'>Urban</BrandName>
+        <BrandName className='medium'>Urban Clothing</BrandName>
       </LogoContainer>
       <OptionContainer>
         <OptionLink to='/shop'>SHOP</OptionLink>

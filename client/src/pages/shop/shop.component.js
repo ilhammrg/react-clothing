@@ -1,39 +1,43 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { Route } from 'react-router-dom';
+
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-
 import { fetchCollectionStart } from '../../redux/shop/shop.actions';
 
-import CollectionOverviewContainer from '../../components/collection-overview/collection-overview.container';
-import CollectionPageContainer from '../collection/collection.container';
+import Spinner from '../../components/spinner/spinner.component';
+
+const CollectionOverviewContainer = lazy(() => import('../../components/collection-overview/collection-overview.container'));
+const CollectionPageContainer = lazy(() => import('../collection/collection.container'));
 
 const Shop = ({ fetchCollectionStart, match }) => {
-    useEffect(() => {
-        fetchCollectionStart();
-    }, [fetchCollectionStart]);
+  useEffect(() => {
+    fetchCollectionStart();
+  }, [fetchCollectionStart]);
 
-    return (
-        <div className='shop-page'>
-            <Route 
-                exact path={`${match.path}`} 
-                component={CollectionOverviewContainer}
-            />
-            <Route 
-                path={`${match.path}/:collectionID`} 
-                component={CollectionPageContainer} 
-            />
-        </div>
-    );
+  return (
+    <div className='shop-page'>
+      <Suspense fallback={<Spinner />}>
+        <Route 
+          exact path={`${match.path}`} 
+          component={CollectionOverviewContainer}
+        />
+        <Route 
+          path={`${match.path}/:collectionID`} 
+          component={CollectionPageContainer} 
+        />
+      </Suspense>
+    </div>
+  );
 };
 
 const mapDispatchToProps = dispatch => {
-    return {
-        fetchCollectionStart: () => dispatch(fetchCollectionStart())
-    };
+  return {
+    fetchCollectionStart: () => dispatch(fetchCollectionStart())
+  };
 };
 
 
 export default compose(
-    connect(null, mapDispatchToProps)
+  connect(null, mapDispatchToProps)
 )(Shop);

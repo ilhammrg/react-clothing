@@ -38,12 +38,23 @@ export const BrandLogo = styled(Logo)`
 `;
 
 export const BrandName = styled.h3`
-  display: none;
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 400;
+  font-family: 'Fredericka the Great', cursive;
+
+  &.medium {
+    display: none;
+  }
 
   @media screen and (min-width: 768px) {
-    display: inline-block;
-    font-size: 1.7rem;
-    font-weight: 400;
+    &.medium {
+      display: inline-block;
+    }
+    
+    &.small {
+      display: none;
+    }
   }
 `;
 
@@ -66,11 +77,14 @@ export const OptionLink = styled(Link)`
   color: #666;
   transition: 0.3s;
 
-  &:hover {
-    color: #131313
-  }
-
   @media screen and (min-width: 768px) {
     padding: 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+
+    &:hover {
+      color: #131313;
+      background-color: #efefef;
+    }
   }
 `;
