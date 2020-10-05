@@ -12,22 +12,22 @@ import { CartIconContainer, CartItemCount } from './cart-icon.styles';
 import { ReactComponent as ShoppingCartLogo } from '../../assets/shopping-bag.svg';
 
 const CartIcon = ({ toggleCartHidden, itemCount }) => {
-    return (
-        <CartIconContainer title="Open Cart" onClick={toggleCartHidden}>
-            <ShoppingCartLogo className="shopping-icon"/>
-            <CartItemCount className="item-count">{itemCount}</CartItemCount>
-        </CartIconContainer>
-    );
+  return (
+    <CartIconContainer title="Open Cart" onClick={toggleCartHidden}>
+      <ShoppingCartLogo className="shopping-icon"/>
+      <CartItemCount className="item-count">{itemCount}</CartItemCount>
+    </CartIconContainer>
+  );
 };
 
 const mapStateToProps = createStructuredSelector({
-    itemCount: selectItemsCount
+  itemCount: selectItemsCount
 });
 
 const mapDispatchToProps = dispatch => {
-    return {
-        toggleCartHidden: () => dispatch(toggleCartHidden())
-    };
+  return {
+    toggleCartHidden: () => dispatch(toggleCartHidden())
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CartIcon);

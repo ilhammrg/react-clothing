@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const SignInContainer = styled.div`
   background-color: #fff;
-  width: 380px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   border: 1px solid #ddd;
-  margin-bottom: auto;
+  margin-bottom: 50px;
   font-family: 'Inter', sans-serif;
 `;
 
@@ -17,6 +17,7 @@ export const SignInHeader = styled.div`
   border-radius: 5px 5px 0 0;
   padding: 25px;
   background-color: #fbfbfb;
+  text-align: center;
 `;
 
 export const Title = styled.span`
