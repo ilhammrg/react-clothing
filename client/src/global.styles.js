@@ -23,4 +23,10 @@ export const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: black;
   }
+
+  #app {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+  }
 `;

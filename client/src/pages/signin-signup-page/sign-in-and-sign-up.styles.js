@@ -5,7 +5,7 @@ export const SignInSignUpContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 100px auto;
+  margin: 100px auto 0 auto;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
