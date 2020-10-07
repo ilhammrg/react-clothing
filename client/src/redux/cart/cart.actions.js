@@ -1,34 +1,47 @@
 import cartActionTypes from './cart.types';
 
 export const toggleCartHidden = () => {
-    return {
-        type: cartActionTypes.TOGGLE_CART_HIDDEN
-    };
+  return {
+    type: cartActionTypes.TOGGLE_CART_HIDDEN
+  };
 };
 
 export const addItem = item => {
-    return {
-        type: cartActionTypes.ADD_ITEM,
-        payload: item
-    };
+  return {
+    type: cartActionTypes.ADD_ITEM,
+    payload: item
+  };
 };
 
 export const removeItem = item => {
-    return {
-        type: cartActionTypes.REMOVE_ITEM,
-        payload: item
-    };
+  return {
+    type: cartActionTypes.REMOVE_ITEM,
+    payload: item
+  };
 };
 
 export const clearItemFromCart = item => {
-    return {
-        type: cartActionTypes.CLEAR_ITEM_FROM_CART,
-        payload: item
-    };
+  return {
+    type: cartActionTypes.CLEAR_ITEM_FROM_CART,
+    payload: item
+  };
 };
 
 export const emptyCart = () => {
-    return {
-        type: cartActionTypes.EMPTY_CART
-    };
-}
+  return {
+    type: cartActionTypes.EMPTY_CART
+  };
+};
+
+export const setCartFromFirebase = (cartItems) => {
+  return {
+    type: cartActionTypes.SET_CART_FROM_FIREBASE,
+    payload: cartItems
+  };
+};
+
+export const updateCartInFirebase = () => {
+  return {
+    type: cartActionTypes.UPDATE_CART_IN_FIREBASE,
+  };
+};
