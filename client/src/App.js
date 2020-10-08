@@ -8,6 +8,7 @@ import { selectCurrentUser } from './redux/user/user.selectors';
 
 import Header from './components/header/header.component';
 import Footer from './components/footer/footer.component';
+import NotFound from './pages/not-found/not-found.component';
 import Spinner from './components/spinner/spinner.component';
 import ErrorBoundary from './components/error-boundary/error-boundary.component';
 
@@ -27,20 +28,21 @@ const App = ({ checkUserSession, currentUser }) => {
     <div id="app">
       <GlobalStyles />
       <Header />
-      <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
-            <Route exact path='/' component={Homepage} />
-            <Route exact path='/checkout' component={CheckoutPage} />
-            <Route 
-              exact 
-              path='/signin' 
-              render={() => currentUser ? (<Redirect to='/' />) : (<SigninAndSignup />)} 
-              />
-            <Route path='/shop' component={Shop} />
+            <Switch>
+              <Route exact path='/' component={Homepage} />
+              <Route exact path='/checkout' component={CheckoutPage} />
+              <Route 
+                exact 
+                path='/signin' 
+                render={() => currentUser ? (<Redirect to='/' />) : (<SigninAndSignup />)} 
+                />
+              <Route path='/shop' component={Shop} />
+              <Route component={NotFound} />
+            </Switch>
           </Suspense>
         </ErrorBoundary>
-      </Switch>
       <Footer />
     </div>
   );
