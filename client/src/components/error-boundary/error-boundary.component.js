@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { ErrorImageOverlay, ErrorImageContainer, ErrorImageText } from './error-boundary.styles';
+import { 
+  ErrorImageOverlay, 
+  ErrorImageText, 
+  ErrorImage,
+  ErrorTitle 
+} from './error-boundary.styles';
 
 class ErrorBoundary extends React.Component {
   constructor() {
@@ -23,8 +28,10 @@ class ErrorBoundary extends React.Component {
     if(this.state.hasError) {
       return (
         <ErrorImageOverlay>
-          <ErrorImageContainer imageUrl={'https://i.imgur.com/A040Lxr.png'} />
-          <ErrorImageText>Something went wrong. Please try again.</ErrorImageText>
+          <ErrorTitle>Oops...</ErrorTitle>
+          <ErrorImage />
+          <ErrorImageText>Something went wrong</ErrorImageText>
+          <ErrorImageText>Check your connection and try again</ErrorImageText>
         </ErrorImageOverlay>
       )
     }

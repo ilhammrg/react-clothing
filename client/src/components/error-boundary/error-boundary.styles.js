@@ -1,31 +1,38 @@
 import styled from 'styled-components';
+import { ReactComponent as OfflineImage } from './notify.svg';
 
 export const ErrorImageOverlay = styled.div`
-  height: 60vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
 `;
 
-export const ErrorImageContainer = styled.div`
-  display: inline-block;
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
-  background-size: cover;
-  background-position: center;
+export const ErrorImage = styled(OfflineImage)`
   width: 250px;
   height: 250px;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     width: 350px;
     height: 350px;
   }
 `;
 
-export const ErrorImageText = styled.h2`
-  font-size: 28px;
+export const ErrorTitle = styled.span`
+  font-weight: 400;
+  font-size: 40px;
+  color: #666;
+  text-align: center;
+`;
+
+export const ErrorImageText = styled.span`
+  font-size: 18px;
   color: #858585;
   text-align: center;
+  font-family: "Inter", sans-serif;
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
 `;
