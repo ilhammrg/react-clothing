@@ -9,6 +9,7 @@ export const MenuItemContainer = styled.div`
   justify-content: center;
   margin: 0 7.5px 15px;
   overflow: hidden;
+  background-color: #efefef;
 
   &:hover {
     cursor: pointer;
@@ -19,7 +20,7 @@ export const MenuItemContainer = styled.div`
     }
 
     div:last-child {
-      opacity: 0.9;
+      opacity: 0.8;
     }
   }
 

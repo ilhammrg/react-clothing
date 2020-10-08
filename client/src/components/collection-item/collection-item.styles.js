@@ -52,6 +52,7 @@ export const CollectionImage = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   margin-bottom: 5px;
+  background-color: #efefef;
 `;
 
 export const CollectionItemFooter = styled.div`

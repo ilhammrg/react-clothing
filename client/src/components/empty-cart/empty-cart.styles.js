@@ -15,7 +15,8 @@ export const EmptyCartImage = styled(CartEmptyImage)`
 `;
 
 export const EmptyCartText = styled.span`
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-family: 'Inter', sans-serif;
   text-align: center;
+  color: #858585;
 `;

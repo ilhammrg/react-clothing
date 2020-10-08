@@ -44,7 +44,7 @@ export const SocialMediaLink = styled.a`
     transition: 0.3s;
 
     &:hover {
-      background-color: #efefef;
+      transform: translateY(-5px);
     }
   }
 `;
