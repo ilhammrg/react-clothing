@@ -67,7 +67,7 @@ export const SocialMediaContainer = styled.div`
 `;
 
 export const SocialMediaLink = styled.a`
-  margin: 0 5px;
+  margin-right: 10px;
   padding: 5px;
   
   @media screen and (min-width: 1024px) {

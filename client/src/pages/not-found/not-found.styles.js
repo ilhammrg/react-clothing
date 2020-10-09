@@ -7,6 +7,7 @@ export const NotFoundContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
+  min-height: 100vh;
 `;
 
 export const NotFoundImage = styled(NotFoundLogo)`

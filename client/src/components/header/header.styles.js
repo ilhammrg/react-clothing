@@ -12,10 +12,9 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
-
-  /* @media screen and (min-width: 1600px) {
-    width: 1600px;
-  } */
+  /* box-shadow: 0 1px 1px rgba(0,0,0,0.1); */
+  box-shadow: 0 1px 20px 0 rgba(200,200,200,.1), 0 1px 64px 0 rgba(0,0,0,.1);
+  /* border-bottom: 1px solid #ddd; */
 `;
 
 export const LogoContainer = styled(Link)`

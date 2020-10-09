@@ -5,7 +5,8 @@ export const CheckoutPageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 80px auto;
+  margin: 100px auto;
+  min-height: 100vh;
 
   .title {
     margin-bottom: 30px;
@@ -18,6 +19,10 @@ export const CheckoutPageContainer = styled.div`
     .title {
       margin-bottom: 50px;
     }
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin: 150px auto;
   }
 `;
 

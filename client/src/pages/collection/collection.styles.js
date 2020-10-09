@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const CollectionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 80px 8px;
+  margin: 100px 8px;
 
   @media screen and (min-width: 768px) {
-    margin: 80px 40px;
+    margin: 100px 40px;
   }
 `;
 
