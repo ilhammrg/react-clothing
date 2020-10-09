@@ -13,9 +13,9 @@ export const HeaderContainer = styled.div`
   align-items: center;
   padding: 0 5px;
 
-  @media screen and (min-width: 1600px) {
+  /* @media screen and (min-width: 1600px) {
     width: 1600px;
-  }
+  } */
 `;
 
 export const LogoContainer = styled(Link)`

@@ -13,10 +13,10 @@ export const GlobalStyles = createGlobalStyle`
     background-color: #fff;
     overflow-y: scroll;
 
-    @media screen and (min-width: 1600px) {
+    /* @media screen and (min-width: 1600px) {
       max-width: 1600px;
       margin: 0 auto;
-    }
+    } */
   }
 
   a {

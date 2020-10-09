@@ -8,13 +8,27 @@ import {
   InstagramLogo,
   FacebookLogo,
   TwitterLogo,
-  YoutubeLogo
+  YoutubeLogo,
+  Subtitle,
+  NavigationContainer,
+  NavigationLink,
+  DescriptionContainer,
+  Description,
+  BrandName
 } from './footer.styles';
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <CopyrightText>&copy; 2020 Urban Clothing Co.</CopyrightText>
+      <Subtitle>QUICK LINKS</Subtitle>
+      <NavigationContainer>
+        <NavigationLink to='/shop'>Shop</NavigationLink>
+        <NavigationLink to='checkout'>Checkout</NavigationLink>
+        <NavigationLink to='/about-us'>About Us</NavigationLink>
+        <NavigationLink to='/contact'>Contact</NavigationLink>
+        <NavigationLink to='/privacy-policy'>Privacy Policy</NavigationLink>
+      </NavigationContainer>
+      <Subtitle id='social-media-title'>FOLLOW US</Subtitle>
       <SocialMediaContainer>
         <SocialMediaLink href='#instagram' title='Instagram'>
           <InstagramLogo title='Instagram' />
@@ -29,6 +43,11 @@ const Footer = () => {
           <YoutubeLogo title='Youtube' />
         </SocialMediaLink>
       </SocialMediaContainer>
+      <BrandName>urban clothing</BrandName>
+      <DescriptionContainer>
+        <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacus eget enim euismod ullamcorper. Integer eu ex ut dolor porta consequat sed eu nibh. Donec at viverra nisl.</Description>
+        <CopyrightText>&copy; 2020 Urban Clothing Co.</CopyrightText>
+      </DescriptionContainer>
     </FooterContainer>
   );
 }
