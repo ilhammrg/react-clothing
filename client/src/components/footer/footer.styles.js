@@ -22,7 +22,7 @@ export const FooterContainer = styled.footer`
   }
 
   @media screen and (min-width: 1600px) {
-    grid-template-columns: repeat(4, 400px);
+    grid-template-columns: repeat(4, 320px);
   }
 `;
 
@@ -146,7 +146,7 @@ export const Description = styled.p`
 `;
 
 export const BrandName = styled.span`
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Fredoka One', cursive;
   color: white;
   font-size: 2rem;
   margin: 30px 0 0 0;

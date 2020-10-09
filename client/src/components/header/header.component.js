@@ -14,8 +14,8 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
   return (
     <HeaderContainer>
       <LogoContainer to='/'>
-        <BrandName className='small'>Urban</BrandName>
-        <BrandName className='medium'>Urban Clothing</BrandName>
+        <BrandName className='small'>urban</BrandName>
+        <BrandName className='medium'>urban clothing</BrandName>
       </LogoContainer>
       <OptionContainer>
         <OptionLink to='/shop'>SHOP</OptionLink>

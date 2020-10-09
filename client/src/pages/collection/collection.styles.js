@@ -8,6 +8,11 @@ export const CollectionContainer = styled.div`
   @media screen and (min-width: 768px) {
     margin: 100px 40px;
   }
+
+  @media screen and (min-width: 1280px) {
+    max-width: 1280px;
+    margin: 100px auto;
+  }
 `;
 
 export const CollectionTitle = styled.span`

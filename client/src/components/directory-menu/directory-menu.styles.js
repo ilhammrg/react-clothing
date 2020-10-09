@@ -9,5 +9,6 @@ export const DirectoryMenuContainer = styled.div`
 
   @media screen and (min-width: 1280px) {
     margin: 150px 0;
+    max-width: 1280px;
   }
 `;

@@ -12,9 +12,7 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
-  /* box-shadow: 0 1px 1px rgba(0,0,0,0.1); */
   box-shadow: 0 1px 20px 0 rgba(200,200,200,.1), 0 1px 64px 0 rgba(0,0,0,.1);
-  /* border-bottom: 1px solid #ddd; */
 `;
 
 export const LogoContainer = styled(Link)`
@@ -40,7 +38,7 @@ export const BrandName = styled.h3`
   display: inline-block;
   font-size: 1.7rem;
   font-weight: 400;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Fredoka One', cursive;
 
   &.medium {
     display: none;
