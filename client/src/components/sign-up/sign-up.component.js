@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 import {
   SignupContainer,
-  SignupHeader,
   Title,
-  Subtitle,
-  Form
+  Form,
+  SignUpFooter,
+  SignInLink
 } from './sign-up.styles';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
@@ -41,10 +41,7 @@ const SignUp = ({ signUpStart }) => {
 
   return (
     <SignupContainer>
-      <SignupHeader>
-        <Title>I don't have an account</Title>
-        <Subtitle>Sign up with Email</Subtitle>
-      </SignupHeader>
+      <Title>Sign Up</Title>
       <Form onSubmit={handleSubmit}>
         <FormInput 
           name='displayName' 
@@ -80,6 +77,8 @@ const SignUp = ({ signUpStart }) => {
         />
         <CustomButton type='submit'>Sign Up</CustomButton>
       </Form>
+      <SignUpFooter>Already have an account?</SignUpFooter>
+      <SignInLink to='/signin'>SIGN IN NOW</SignInLink>
     </SignupContainer>
   );
 }

@@ -4,11 +4,11 @@ import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 import { 
   SignInContainer,
-  SignInHeader,
   Title,
-  Subtitle,
   Form,
-  ButtonContainer
+  ButtonContainer,
+  SignInFooter,
+  SignUpLink
 } from './sign-in.styles';
 
 import { connect } from 'react-redux';
@@ -31,10 +31,7 @@ const SignIn = ({ signInWithEmail, signInWithGoogle }) => {
 
   return (
     <SignInContainer>
-      <SignInHeader>
-        <Title>I have an account</Title>
-        <Subtitle>Sign in with Email or Google Account</Subtitle>
-      </SignInHeader>
+      <Title>Sign In</Title>
       <Form onSubmit={handleSubmit}>
         <FormInput 
           name='email' 
@@ -57,6 +54,8 @@ const SignIn = ({ signInWithEmail, signInWithGoogle }) => {
           <CustomButton type='button' onClick={signInWithGoogle} isGoogleSignIn>Sign In with Google</CustomButton>
         </ButtonContainer>
       </Form>
+      <SignInFooter>Don't have an account?</SignInFooter>
+      <SignUpLink to='/signup'>SIGN UP NOW</SignUpLink>
     </SignInContainer>
   );
 }

@@ -15,9 +15,10 @@ import ErrorBoundary from './components/error-boundary/error-boundary.component'
 import { GlobalStyles } from './global.styles';
 
 const Homepage = lazy(() => import('./pages/homepage/homepage.component'));
-const SigninAndSignup = lazy(() => import('./pages/signin-signup-page/sign-in-and-sign-up.component'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 const Shop = lazy(() => import('./pages/shop/shop.component'));
+const SignInPage = lazy(() => import('./pages/sign-in/sign-in-page.component'));
+const SignUpPage = lazy(() => import('./pages/sign-up/sign-up-page.component'));
 
 const App = ({ checkUserSession, currentUser }) => {
   useEffect(() => {
@@ -36,8 +37,13 @@ const App = ({ checkUserSession, currentUser }) => {
               <Route 
                 exact 
                 path='/signin' 
-                render={() => currentUser ? (<Redirect to='/' />) : (<SigninAndSignup />)} 
+                render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage />)} 
                 />
+              <Route 
+                exact 
+                path='/signup' 
+                render={() => currentUser ? (<Redirect to='/' />) : (<SignUpPage />)} 
+              />
               <Route path='/shop' component={Shop} />
               <Route component={NotFound} />
             </Switch>

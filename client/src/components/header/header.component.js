@@ -23,7 +23,7 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
           currentUser ?
           <OptionLink as='div' type='button' onClick={signOutStart}>SIGN OUT</OptionLink>
           :
-          <OptionLink to='/signin'>ACCOUNT</OptionLink>
+          <OptionLink to='/signin'>SIGN IN</OptionLink>
         }
         <CartIcon />
       </OptionContainer>
