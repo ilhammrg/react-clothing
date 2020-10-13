@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MenuItemContainer = styled.div`
+export const MenuItemContainer = styled.button`
   min-width: 30%;
   height: 240px;
   flex: 1 1 auto;
@@ -10,6 +10,7 @@ export const MenuItemContainer = styled.div`
   margin: 0 7.5px 15px;
   overflow: hidden;
   background-color: #efefef;
+  border: none;
 
   &:hover {
     cursor: pointer;
