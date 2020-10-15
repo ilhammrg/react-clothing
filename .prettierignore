@@ -1,0 +1,13 @@
+.cache
+package.json
+package-lock.json
+public
+node_modules
+build
+client/build
+client/node_modules
+client/public
+client/package.json
+client/package-lock.json
+firebase_hosting
+server.js

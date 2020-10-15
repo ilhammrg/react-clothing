@@ -50,7 +50,7 @@ export const Subtitle = styled.span`
       grid-column: 4 / 5;
       grid-row: 1 / 2;
       margin: 0;
-  }
+    }
   }
 `;
 
@@ -69,7 +69,7 @@ export const SocialMediaContainer = styled.div`
 export const SocialMediaLink = styled.a`
   margin-right: 10px;
   padding: 5px;
-  
+
   @media screen and (min-width: 1024px) {
     border-radius: 5px;
     transition: 0.3s;

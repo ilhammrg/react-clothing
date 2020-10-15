@@ -18,7 +18,7 @@ export const CollectionItemContainer = styled.div`
     height: unset;
     line-height: unset;
     padding: 15px;
-    font-size: 0.6rem
+    font-size: 0.6rem;
   }
 
   @media screen and (min-width: 1024px) {

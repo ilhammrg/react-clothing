@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { WelcomeImage, WelcomeContainer, WelcomeText } from './welcome-logo.styles';
+import {
+  WelcomeImage,
+  WelcomeContainer,
+  WelcomeText,
+} from './welcome-logo.styles';
 
 const WelcomeLogo = () => {
   return (

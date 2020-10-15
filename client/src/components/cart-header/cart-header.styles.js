@@ -7,7 +7,7 @@ export const Container = styled.section`
   @media screen and (min-width: 768px) {
     height: 100%;
     width: 100%;
-    box-shadow: 0 1px 20px rgba(200,200,200,0.5);
+    box-shadow: 0 1px 20px rgba(200, 200, 200, 0.5);
     grid-row: 4 / 5;
     grid-column: 2 / 4;
     display: flex;
@@ -31,7 +31,7 @@ export const Container = styled.section`
       }
 
       & div {
-        width: 100%
+        width: 100%;
       }
     }
   }
@@ -56,13 +56,13 @@ export const EmptyContainer = styled.section`
 `;
 
 export const EmptyTitle = styled.h3`
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   text-align: center;
   font-size: 1rem;
 `;
 
 export const EmptyText = styled.span`
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   text-align: center;
   font-size: 1rem;
 `;

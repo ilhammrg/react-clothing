@@ -12,7 +12,7 @@ export const SignInContainer = styled.div`
 export const Title = styled.span`
   margin: auto;
   font-size: 2rem;
-  font-family: 'Fredoka One',cursive;
+  font-family: 'Fredoka One', cursive;
 `;
 
 export const Form = styled.form`

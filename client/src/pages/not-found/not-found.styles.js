@@ -1,5 +1,7 @@
 import styled from 'styled-components';
-import { ReactComponent as NotFoundLogo } from './not-found.svg'
+import { Link } from 'react-router-dom';
+
+import { ReactComponent as NotFoundLogo } from './not-found.svg';
 
 export const NotFoundContainer = styled.div`
   display: flex;
@@ -28,12 +30,15 @@ export const NotFoundTitle = styled.span`
 
 export const NotFoundText = styled.span`
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: #858585;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
+`;
 
-  @media screen and (min-width: 768px) {
-    font-size: 24px;
-  }  
+export const HomeLink = styled(Link)`
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  color: #4285f4;
+  font-weight: 600;
 `;

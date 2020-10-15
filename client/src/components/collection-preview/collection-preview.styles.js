@@ -5,10 +5,13 @@ export const CollectionPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 1rem;
 `;
 
 export const CollectionPreviewTitle = styled(Link)`
-  font-size: 18px;
+  font-size: 1.5rem;
   display: inline-block;
   width: fit-content;
   margin-bottom: 10px;

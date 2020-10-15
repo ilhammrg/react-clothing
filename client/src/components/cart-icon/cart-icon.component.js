@@ -14,19 +14,19 @@ import { ReactComponent as ShoppingCartLogo } from '../../assets/shopping-bag.sv
 const CartIcon = ({ toggleCartHidden, itemCount }) => {
   return (
     <CartIconContainer title="Open Cart" onClick={toggleCartHidden}>
-      <ShoppingCartLogo className="shopping-icon"/>
+      <ShoppingCartLogo className="shopping-icon" />
       <CartItemCount className="item-count">{itemCount}</CartItemCount>
     </CartIconContainer>
   );
 };
 
 const mapStateToProps = createStructuredSelector({
-  itemCount: selectItemsCount
+  itemCount: selectItemsCount,
 });
 
 const mapDispatchToProps = dispatch => {
   return {
-    toggleCartHidden: () => dispatch(toggleCartHidden())
+    toggleCartHidden: () => dispatch(toggleCartHidden()),
   };
 };
 

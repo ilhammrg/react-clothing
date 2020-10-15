@@ -28,4 +28,3 @@ export const CartDropdownItems = styled.div`
     margin: auto;
   }
 `;
-

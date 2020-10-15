@@ -8,6 +8,6 @@ const Spinner = () => {
       <SpinnerContainer />
     </SpinnerOverlay>
   );
-}
+};
 
 export default Spinner;

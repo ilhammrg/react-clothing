@@ -31,7 +31,7 @@ export const ErrorImageText = styled.span`
   font-size: 18px;
   color: #858585;
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 
   @media screen and (min-width: 768px) {
     font-size: 24px;

@@ -11,6 +11,6 @@ const SignInPage = () => {
       <SignIn />
     </SignInPageContainer>
   );
-}
+};
 
 export default SignInPage;

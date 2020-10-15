@@ -95,3 +95,10 @@ export const SignInLink = styled(Link)`
   color: #4285f4;
   font-weight: 600;
 `;
+
+export const ShopLink = styled(Link)`
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  color: #4285f4;
+  font-weight: 600;
+`;

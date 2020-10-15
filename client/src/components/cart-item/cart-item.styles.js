@@ -23,4 +23,3 @@ export const CartItemDetailsContainer = styled.div`
     font-size: 0.8rem;
   }
 `;
-

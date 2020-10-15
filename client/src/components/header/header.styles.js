@@ -12,7 +12,8 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
-  box-shadow: 0 1px 20px 0 rgba(200,200,200,.1), 0 1px 64px 0 rgba(0,0,0,.1);
+  box-shadow: 0 1px 20px 0 rgba(200, 200, 200, 0.1),
+    0 1px 64px 0 rgba(0, 0, 0, 0.1);
 `;
 
 export const LogoContainer = styled(Link)`
@@ -48,7 +49,7 @@ export const BrandName = styled.h3`
     &.medium {
       display: inline-block;
     }
-    
+
     &.small {
       display: none;
     }
@@ -70,7 +71,7 @@ export const OptionContainer = styled.div`
 export const OptionLink = styled(Link)`
   padding: 20px 5px;
   cursor: pointer;
-  font-weight: 200;
+  font-weight: 400;
   color: #666;
   transition: 0.3s;
 

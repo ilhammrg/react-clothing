@@ -13,7 +13,7 @@ export const WelcomeContainer = styled.div`
 `;
 
 export const WelcomeText = styled.span`
-  font-family: 'Fredoka One',cursive;
+  font-family: 'Fredoka One', cursive;
   font-size: 2.5rem;
   color: #4285f4;
 `;

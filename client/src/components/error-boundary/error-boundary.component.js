@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { 
-  ErrorImageOverlay, 
-  ErrorImageText, 
+import {
+  ErrorImageOverlay,
+  ErrorImageText,
   ErrorImage,
-  ErrorTitle 
+  ErrorTitle,
 } from './error-boundary.styles';
 
 class ErrorBoundary extends React.Component {
@@ -12,7 +12,7 @@ class ErrorBoundary extends React.Component {
     super();
 
     this.state = {
-      hasError: false
+      hasError: false,
     };
   }
 
@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component {
   }
 
   render() {
-    if(this.state.hasError) {
+    if (this.state.hasError) {
       return (
         <ErrorImageOverlay>
           <ErrorTitle>Oops...</ErrorTitle>
@@ -33,7 +33,7 @@ class ErrorBoundary extends React.Component {
           <ErrorImageText>Something went wrong</ErrorImageText>
           <ErrorImageText>Check your connection and try again</ErrorImageText>
         </ErrorImageOverlay>
-      )
+      );
     }
 
     return this.props.children;

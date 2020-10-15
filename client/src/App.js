@@ -29,39 +29,44 @@ const App = ({ checkUserSession, currentUser }) => {
     <div id="app">
       <GlobalStyles />
       <Header />
-        <ErrorBoundary>
-          <Suspense fallback={<Spinner />}>
-            <Switch>
-              <Route exact path='/' component={Homepage} />
-              <Route exact path='/checkout' component={CheckoutPage} />
-              <Route 
-                exact 
-                path='/signin' 
-                render={() => currentUser ? (<Redirect to='/' />) : (<SignInPage />)} 
-                />
-              <Route 
-                exact 
-                path='/signup' 
-                render={() => currentUser ? (<Redirect to='/' />) : (<SignUpPage />)} 
-              />
-              <Route path='/shop' component={Shop} />
-              <Route component={NotFound} />
-            </Switch>
-          </Suspense>
-        </ErrorBoundary>
+      <ErrorBoundary>
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            <Route exact path="/" component={Homepage} />
+            <Route exact path="/home" component={Homepage} />
+            <Route exact path="/checkout" component={CheckoutPage} />
+            <Route
+              exact
+              path="/signin"
+              render={() =>
+                currentUser ? <Redirect to="/home" /> : <SignInPage />
+              }
+            />
+            <Route
+              exact
+              path="/signup"
+              render={() =>
+                currentUser ? <Redirect to="/home" /> : <SignUpPage />
+              }
+            />
+            <Route path="/shop" component={Shop} />
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
+      </ErrorBoundary>
       <Footer />
     </div>
   );
-}
+};
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = dispatch => {
   return {
-    checkUserSession: () => dispatch(checkUserSession())
+    checkUserSession: () => dispatch(checkUserSession()),
   };
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

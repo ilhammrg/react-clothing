@@ -36,7 +36,7 @@ export function* onCartChange() {
     [
       cartActionTypes.ADD_ITEM,
       cartActionTypes.REMOVE_ITEM,
-      cartActionTypes.CLEAR_ITEM_FROM_CART
+      cartActionTypes.CLEAR_ITEM_FROM_CART,
     ],
     updateCartInFirebase
   );
@@ -54,6 +54,6 @@ export function* cartSagas() {
   yield all([
     call(onUserSignOutSuccess),
     call(onCartChange),
-    call(onUserSignIn)
+    call(onUserSignIn),
   ]);
 }

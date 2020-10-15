@@ -24,7 +24,7 @@ export const CheckoutPageContainer = styled.div`
   @media screen and (min-width: 1280px) {
     margin: 150px auto;
     padding: 60px;
-    box-shadow: 0 1px 60px rgba(200,200,200,0.5);
+    box-shadow: 0 1px 60px rgba(200, 200, 200, 0.5);
   }
 `;
 
