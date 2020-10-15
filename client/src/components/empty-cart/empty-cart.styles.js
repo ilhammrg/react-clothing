@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import { ReactComponent as CartEmptyImage } from './cart-empty.svg'
 
@@ -15,8 +16,13 @@ export const EmptyCartImage = styled(CartEmptyImage)`
 `;
 
 export const EmptyCartText = styled.span`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Inter', sans-serif;
   text-align: center;
   color: #858585;
+`;
+
+export const ShopLink = styled(Link)`
+  color: #4285f4;
+  font-weight: 600;
 `;
