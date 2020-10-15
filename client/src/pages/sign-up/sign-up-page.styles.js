@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SignUpPageContainer = styled.div`
+export const SignUpPageContainer = styled.main`
   min-height: 100vh;
   width: 100%;
   display: flex;

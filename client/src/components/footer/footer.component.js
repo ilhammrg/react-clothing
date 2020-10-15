@@ -12,6 +12,7 @@ import {
   Subtitle,
   NavigationContainer,
   NavigationLink,
+  OutsideLink,
   DescriptionContainer,
   Description,
   BrandName,
@@ -25,8 +26,8 @@ const Footer = () => {
         <NavigationLink to="/home">Home</NavigationLink>
         <NavigationLink to="/shop">Shop</NavigationLink>
         <NavigationLink to="/checkout">Checkout</NavigationLink>
-        <NavigationLink to="/#about-us">About Us</NavigationLink>
-        <NavigationLink to="/#contact">Contact</NavigationLink>
+        <OutsideLink href="https://github.com/ilhammrg" target="_blank" rel="noopener noreferrer">About Us</OutsideLink>
+        <OutsideLink href="https://linkedin.com/in/ilham-gunawan" target="_blank" rel="noopener noreferrer">Contact</OutsideLink>
         <NavigationLink to="/#privacy-policy">Privacy Policy</NavigationLink>
       </NavigationContainer>
       <Subtitle id="social-media-title">FOLLOW US</Subtitle>

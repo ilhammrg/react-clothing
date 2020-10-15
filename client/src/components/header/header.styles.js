@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ReactComponent as Logo } from '../../assets/triangle.svg';
 import { Link } from 'react-router-dom';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;
   z-index: 99;
@@ -35,7 +35,7 @@ export const BrandLogo = styled(Logo)`
   }
 `;
 
-export const BrandName = styled.h3`
+export const BrandName = styled.h1`
   display: inline-block;
   font-size: 1.7rem;
   font-weight: 400;
@@ -56,7 +56,7 @@ export const BrandName = styled.h3`
   }
 `;
 
-export const OptionContainer = styled.div`
+export const OptionContainer = styled.nav`
   display: flex;
   height: 100%;
   align-items: center;

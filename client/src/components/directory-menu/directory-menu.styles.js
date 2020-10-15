@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const DirectoryMenuContainer = styled.div`
+export const DirectoryMenuContainer = styled.section`
   width: 95%;
   margin-bottom: 100px;
   display: flex;

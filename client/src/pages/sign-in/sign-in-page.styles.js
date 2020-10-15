@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const SignInPageContainer = styled.div`
+export const SignInPageContainer = styled.main`
   min-height: 100vh;
   width: 100%;
   display: flex;

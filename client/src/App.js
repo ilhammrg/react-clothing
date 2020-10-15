@@ -26,7 +26,7 @@ const App = ({ checkUserSession, currentUser }) => {
   }, [checkUserSession]);
 
   return (
-    <div id="app">
+    <>
       <GlobalStyles />
       <Header />
       <ErrorBoundary>
@@ -55,7 +55,7 @@ const App = ({ checkUserSession, currentUser }) => {
         </Suspense>
       </ErrorBoundary>
       <Footer />
-    </div>
+    </>
   );
 };
 

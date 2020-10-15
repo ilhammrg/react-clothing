@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CollectionContainer = styled.div`
+export const CollectionContainer = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,15 +8,16 @@ export const CollectionContainer = styled.div`
   margin-bottom: 100px;
 `;
 
-export const CollectionTitle = styled.span`
+export const CollectionTitle = styled.h2`
   font-size: 1.5rem;
+  font-weight: 400;
   margin-bottom: 30px;
   padding-left: 2.5rem;
   max-width: 1280px;
   width: 100%;
 `;
 
-export const CollectionItems = styled.div`
+export const CollectionItems = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;

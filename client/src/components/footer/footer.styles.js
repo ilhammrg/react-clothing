@@ -115,7 +115,7 @@ export const NavigationContainer = styled.div`
   }
 `;
 
-export const NavigationLink = styled(Link)`
+const linkStyles = css`
   color: #ccc;
   font-weight: 300;
   padding: 5px 0;
@@ -126,6 +126,14 @@ export const NavigationLink = styled(Link)`
       text-decoration: underline;
     }
   }
+`;
+
+export const NavigationLink = styled(Link)`
+  ${linkStyles}
+`;
+
+export const OutsideLink = styled.a`
+  ${linkStyles}
 `;
 
 export const DescriptionContainer = styled.div`

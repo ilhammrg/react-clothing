@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const SignupContainer = styled.div`
+export const SignupContainer = styled.section`
   background-color: #fff;
   width: 90%;
   display: flex;
@@ -9,9 +9,10 @@ export const SignupContainer = styled.div`
   font-family: 'Inter', sans-serif;
 `;
 
-export const Title = styled.span`
+export const Title = styled.h2`
   margin: auto;
   font-size: 2rem;
+  font-weight: 400;
   font-family: 'Fredoka One', cursive;
 `;
 

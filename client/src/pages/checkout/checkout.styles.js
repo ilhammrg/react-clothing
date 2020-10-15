@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CheckoutPageContainer = styled.div`
+export const CheckoutPageContainer = styled.main`
   width: 95%;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ export const CheckoutPageContainer = styled.div`
   }
 `;
 
-export const CheckoutHeader = styled.div`
+export const CheckoutHeader = styled.section`
   width: 100%;
   padding: 10px 0;
   display: flex;

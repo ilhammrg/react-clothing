@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const CollectionPreviewContainer = styled.div`
+export const CollectionPreviewContainer = styled.article`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -24,7 +24,7 @@ export const CollectionPreviewTitle = styled(Link)`
   }
 `;
 
-export const CollectionPreviewItems = styled.div`
+export const CollectionPreviewItems = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
 

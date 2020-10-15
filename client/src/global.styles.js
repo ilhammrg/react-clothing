@@ -12,11 +12,6 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
     background-color: #fff;
     overflow-y: scroll;
-
-    /* @media screen and (min-width: 1600px) {
-      max-width: 1600px;
-      margin: 0 auto;
-    } */
   }
 
   a {
@@ -24,7 +19,7 @@ export const GlobalStyles = createGlobalStyle`
     color: black;
   }
 
-  #app {
+  #root {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
