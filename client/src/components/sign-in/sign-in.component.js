@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
-import FormInput from '../form-input/form-input.component';
-import CustomButton from '../custom-button/custom-button.component';
+import { connect } from 'react-redux';
+import {
+  googleSignInStart,
+  emailSignInStart,
+} from '../../redux/user/user.actions';
+
 import {
   SignInContainer,
   Title,
@@ -10,12 +14,9 @@ import {
   SignInFooter,
   SignUpLink,
 } from './sign-in.styles';
+import FormInput from '../form-input/form-input.component';
+import CustomButton from '../custom-button/custom-button.component';
 
-import { connect } from 'react-redux';
-import {
-  googleSignInStart,
-  emailSignInStart,
-} from '../../redux/user/user.actions';
 
 const SignIn = ({ signInWithEmail, signInWithGoogle }) => {
   const [userCredentials, updateUserCredentials] = useState({

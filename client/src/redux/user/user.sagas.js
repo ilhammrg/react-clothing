@@ -16,6 +16,7 @@ import {
   signUpSuccess,
   signUpFailure,
 } from './user.actions';
+import { togglePopUp } from '../pop-up/pop-up.actions';
 
 function* getUserSnapshotFromUserRef(userAuth, otherData) {
   try {
@@ -47,6 +48,7 @@ function* signInWithEmail({ payload: { email, password } }) {
     yield getUserSnapshotFromUserRef(user);
   } catch (error) {
     yield put(signInFailure(error));
+    yield put(togglePopUp());
   }
 }
 
@@ -57,6 +59,7 @@ function* isUserAuthenticated() {
     yield getUserSnapshotFromUserRef(userAuth);
   } catch (error) {
     yield put(signInFailure(error));
+    yield put(togglePopUp());
   }
 }
 
@@ -75,6 +78,7 @@ function* signUp({ payload: { email, password, displayName } }) {
     yield put(signUpSuccess({ user, otherData: { displayName } }));
   } catch (error) {
     yield put(signUpFailure(error));
+    yield put(togglePopUp());
   }
 }
 
