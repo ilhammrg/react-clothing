@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { HomepageContainer } from './homepage.styles';
 
@@ -8,6 +9,9 @@ import DirectoryMenu from '../../components/directory-menu/directory-menu.compon
 const Homepage = () => {
   return (
     <HomepageContainer>
+      <Helmet>
+        <title>Urban Clothing | Finest mens and womens apparel</title>
+      </Helmet>
       <PageHeader />
       <DirectoryMenu />
     </HomepageContainer>

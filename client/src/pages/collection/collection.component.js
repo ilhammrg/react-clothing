@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { connect } from 'react-redux';
 import { selectCollection } from '../../redux/shop/shop.selectors';
@@ -17,6 +18,9 @@ const CollectionPage = ({ collection }) => {
     const { title, items } = collection;
     return (
       <CollectionContainer>
+        <Helmet>
+          <title>{title} | Shop Now | Urban Clothing</title>
+        </Helmet>
         <PageHeader />
         <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
         <CollectionItems>

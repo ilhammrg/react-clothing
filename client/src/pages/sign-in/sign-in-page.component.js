@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -13,6 +14,9 @@ import PopUp from '../../components/pop-up/pop-up.component';
 const SignInPage = ({ error, displayPopUp }) => {
   return (
     <SignInPageContainer>
+      <Helmet>
+        <title>Sign In | Urban Clothing</title>
+      </Helmet>
       <WelcomeLogo />
       <SignIn />
       {

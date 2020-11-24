@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -21,6 +22,9 @@ import EmptyCart from '../../components/empty-cart/empty-cart.component';
 const CheckoutPage = ({ cartItems, total }) => {
   return (
     <CheckoutPageContainer>
+      <Helmet>
+        <title>Checkout | Urban Clothing</title>
+      </Helmet>
       <h2 className="title">CHECKOUT</h2>
       <CheckoutHeader>
         <CheckoutHeaderBlock>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -12,6 +13,9 @@ import PageHeader from '../page-header/page-header.component';
 const CollectionOverview = ({ collections }) => {
   return (
     <CollectionOverviewContainer>
+      <Helmet>
+        <title>Shop Now | Urban Clothing</title>
+      </Helmet>
       <PageHeader />
       {
         // Looping through collections state to create collection preview component
